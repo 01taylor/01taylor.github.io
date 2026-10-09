@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Which Cat Are You?</title>
+  <meta name="description" content="Enter your name and find out which cat breed you most resemble.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Which cat are you?</h1>
+    <p class="lead">Type your name and we'll tell you which breed you're most like.</p>
+
+    <form id="name-form" autocomplete="off">
+      <label for="name-input">Your name</label>
+      <div class="row">
+        <input id="name-input" name="name" type="text" maxlength="40" placeholder="e.g. Jordan" required>
+        <button type="submit">Find my cat</button>
+      </div>
+      <p id="error" class="error" role="alert" hidden></p>
+    </form>
+
+    <section id="result" class="result" aria-live="polite" hidden>
+      <p class="result-intro"><span id="result-name"></span>, you're a</p>
+      <h2 id="breed-name"></h2>
+      <p id="breed-tagline" class="tagline"></p>
+      <p id="breed-why" class="why"></p>
+      <button type="button" id="reset" class="secondary">Try another name</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
